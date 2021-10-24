@@ -1,0 +1,18 @@
+<div class="container">
+  <form class="input-group">
+    <input
+      id="search"
+      type="text"
+      class="form-control no-radius"
+      #searchItem
+      placeholder="Search GIFs"
+    />
+
+    <button
+      (click)="searchGIFs(searchItem.value); $event.preventDefault()"
+      class="btn btn-primary no-radius"
+    >
+      <fa-icon [icon]="faSearch"></fa-icon>
+    </button>
+  </form>
+</div>
