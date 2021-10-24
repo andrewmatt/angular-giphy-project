@@ -8,9 +8,8 @@ describe('GiphyResultsGridComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GiphyResultsGridComponent ]
-    })
-    .compileComponents();
+      declarations: [GiphyResultsGridComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

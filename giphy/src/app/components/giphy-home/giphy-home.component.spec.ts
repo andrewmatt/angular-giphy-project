@@ -8,9 +8,8 @@ describe('GiphyHomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GiphyHomeComponent ]
-    })
-    .compileComponents();
+      declarations: [GiphyHomeComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
