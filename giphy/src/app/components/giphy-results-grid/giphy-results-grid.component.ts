@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { GifData } from 'src/app/models/gif';
 import { GiphyService } from 'src/app/services/giphy.service';
 
@@ -7,7 +7,7 @@ import { GiphyService } from 'src/app/services/giphy.service';
   templateUrl: './giphy-results-grid.component.html',
   styleUrls: ['./giphy-results-grid.component.scss'],
 })
-export class GiphyResultsGridComponent {
+export class GiphyResultsGridComponent implements OnChanges{
   @Input() searchKeywords = '';
 
   slicedGifData: GifData[] = [];
