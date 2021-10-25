@@ -1,9 +1,10 @@
 <div
+  id="results-grid"
   class="container-fluid display-items"
   [ngClass]="{ 'display-items-border': slicedGifData.length }"
 >
   <div *ngIf="!slicedGifData.length" class="no-results-title">
-    <h1 class="text-center">Search something to get started!</h1>
+    <h1 id="no-results-title" class="text-center">Search something to get started!</h1>
   </div>
 
   <div class="row">
@@ -26,6 +27,7 @@
 </div>
 <div *ngIf="slicedGifData.length" class="row justify-content-center pagination">
   <ngb-pagination
+    id="pagination"
     [collectionSize]="50"
     [(page)]="page"
     [pageSize]="pageSize"
