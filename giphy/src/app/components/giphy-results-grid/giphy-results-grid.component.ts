@@ -7,7 +7,7 @@ import { GiphyService } from 'src/app/services/giphy.service';
   templateUrl: './giphy-results-grid.component.html',
   styleUrls: ['./giphy-results-grid.component.scss'],
 })
-export class GiphyResultsGridComponent implements OnChanges{
+export class GiphyResultsGridComponent implements OnChanges {
   @Input() searchKeywords = '';
 
   slicedGifData: GifData[] = [];

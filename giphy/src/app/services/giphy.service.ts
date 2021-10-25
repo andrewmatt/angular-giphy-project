@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Gif } from '../models/gif';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class GiphyService {
 
   constructor(private http: HttpClient) {}
 
-  getGifs(value?: string): Observable<Gif> {
+  getGifs(value: string): Observable<Gif> {
     return this.http.get<Gif>(
       `${this.giphyApiUrl}?api_key=${this.giphyApiKey}&q=${value}&limit=${this.paginationLimit}`
     );
