@@ -2,5 +2,7 @@
   <h1 class="title">Giphy GIF Search</h1>
 
   <app-giphy-search (newSearchEvent)="search($event)"></app-giphy-search>
-  <app-giphy-results-grid></app-giphy-results-grid>
+  <app-giphy-results-grid
+    [searchKeywords]="searchKeywords"
+  ></app-giphy-results-grid>
 </div>

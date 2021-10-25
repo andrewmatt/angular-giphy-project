@@ -1,0 +1,26 @@
+.display-items {
+  &-border {
+    border: solid 4px #fff;
+    border-radius: 25px;
+    margin-top: 15px;
+  }
+
+  .no-results-title {
+    color: #fff;
+    margin-top: 150px;
+  }
+
+  .row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    img {
+      width: 333px;
+      height: auto;
+    }
+  }
+}
+
+.pagination {
+  margin-top: 15px;
+}

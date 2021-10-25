@@ -1,1 +1,35 @@
-<p>giphy-results-grid works!</p>
+<div
+  class="container-fluid display-items"
+  [ngClass]="{ 'display-items-border': slicedGifData.length }"
+>
+  <div *ngIf="!slicedGifData.length" class="no-results-title">
+    <h1 class="text-center">Search something to get started!</h1>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let gif of slicedGifData.slice(0, 3)">
+      <div class="col">
+        <img src="{{ gif.images.original.url }}" />
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let gif of slicedGifData.slice(3, 6)">
+      <div class="col"><img src="{{ gif.images.original.url }}" /></div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngFor="let gif of slicedGifData.slice(6, 9)">
+      <div class="col"><img src="{{ gif.images.original.url }}" /></div>
+    </div>
+  </div>
+</div>
+<div *ngIf="slicedGifData.length" class="row justify-content-center pagination">
+  <ngb-pagination
+    [collectionSize]="50"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    (pageChange)="refreshGifs()"
+    aria-label="Default pagination"
+  ></ngb-pagination>
+</div>
